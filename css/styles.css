@@ -1,0 +1,93 @@
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+  }
+.container {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0 7.25%;
+    width: 100%;
+}
+#app h1 {
+    border-bottom: 1px solid #ddd;
+    font-size: 22px;
+    margin: 0 auto;
+    padding: 0 0 18px;
+    text-align: center;
+}
+#app h1 > button {
+    float: right;
+}
+#app form {
+    margin: 18px auto 0;
+}
+#app input[type="text"],
+#app input[type="number"] {
+    border: solid 2px #777;
+    border-radius: 3px;
+    font-size: 16px;
+    height: 25px;
+    width: 30%;
+    padding: 5px 8px 6px;
+}
+#app input[type="checkbox"] {
+    -appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#app input[type="checkbox"] + span {
+    padding: 0 30px 0 0;
+    position: relative;
+}
+#app label {
+    position: relative;
+}
+#app input[type="checkbox"] + span::before {
+    background: transparent;
+    border: 2px #616161 solid;
+    border-radius: 3px;
+    content: "";
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 2px;
+    bottom: 0;
+    margin: auto;
+}
+#app .btn_block {
+    margin: 25px auto 0;
+}
+#app .txt {
+    margin: auto;
+}
+#app .txt-alert {
+    font-size: 17px;
+}
+#app .btn {
+    background: #ffffff;
+    display: inline-block;
+    padding: 8px 8px 7px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 14px;
+}
+#app .btn-delete {
+    font-size: 13px;
+    cursor: pointer;
+    color: #08c;
+}
+#app .btn-purge {
+    color: #EB8686;
+    border: double 2px #EB8686;
+}
+#app .btn-add {
+    color: #fff;
+    background: #ff6010;
+    border: none;
+    margin-right: 10px;
+    padding: 8px 10px;
+}

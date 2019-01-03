@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>calco - シンプルな売買記録アプリ - </title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app" class="container">
+    <header>
+      <h1 class="appName">calco.</h1>  
+    </header>
+    <table>
+      <tr>
+        <th>メルカリ</th>
+      </tr>
+      <tr v-for="(todo, index) in todos">
+        <th>{{ todo.name }}</th>
+        <td>{{ todo.buy }}</td>
+        <td>{{ todo.sell }}</td>
+        <td>{{ todo.sell - todo.buy }}</td>
+        <td @click="deleteItem(index)">×</td>
+      </tr>
+    </table>
+      <form @submit.prevent="addItem">
+        <input class="txt" type="text" v-model="name" placeholder="商品名">
+        <input type="number" v-model="buy" placeholder="買値">
+        <input type="number" v-model="sell" placeholder="売値">
+      </form>
+      <div class="btn_block">
+        <button class="btn btn-add" @click="addItem">売買を記録</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
